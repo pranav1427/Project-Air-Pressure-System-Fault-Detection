@@ -1,2 +1,0 @@
-[ 2023-04-25 17:46:31,333 ] 21 root - INFO - Exporting collection data as pandas dataframe
-[ 2023-04-25 17:46:31,333 ] 27 root - INFO - Save data in feature store

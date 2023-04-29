@@ -5,6 +5,7 @@ from sensor.exception import SensorException
 import os,sys
 import yaml
 import dill
+import numpy as np 
 
 def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataFrame:
     try:
@@ -50,11 +51,11 @@ def convert_columns_float(df:pd.DataFrame,exclude_columns:list)->pd.DataFrame:
 
 def save_object(file_path: str, obj: object) -> None:
     try:
-        logging.info("Entered the save_object method of MainUtils class")
+        logging.info("Entered the save_object method of utils")
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, "wb") as file_obj:
             dill.dump(obj, file_obj)
-        logging.info("Exited the save_object method of MainUtils class")
+        logging.info("Exited the save_object method of utils")
     except Exception as e:
         raise SensorException(e, sys) from e
 
