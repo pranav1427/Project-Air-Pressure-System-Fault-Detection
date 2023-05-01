@@ -13,11 +13,20 @@ class ModelTrainer:
                 data_transformation_artifact:artifact_entity.DataTransformationArtifact
                 ):
         try:
+            logging.info(f"{'>>'*20} Modal Trainer {'<<'*20}")
             self.model_trainer_config=model_trainer_config
             self.data_transformation_artifact=data_transformation_artifact
         
         except Exception as e:
             raise e
+
+    def fine_tune(self):
+        try:
+            #Wite code for Grid Search CV
+            pass
+            
+        except Exception as e:
+            raise SensorException(e, sys)
 
     def train_model(self,x,y):
         try:
