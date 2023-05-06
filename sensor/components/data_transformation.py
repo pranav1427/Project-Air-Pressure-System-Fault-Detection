@@ -59,7 +59,7 @@ class DataTransformation:
             input_feature_test_arr = transformation_pipleine.transform(input_feature_test_df)
             
 
-            smt = SMOTETomek(random_state=42)
+            smt = SMOTETomek()
             logging.info(f"Before resampling in Training set input :{input_feature_train_arr.shape} Target:{target_feature_train_arr.shape}")
             input_feature_train_arr,target_feature_train_arr=smt.fit_resample(input_feature_train_arr,target_feature_train_arr)
             logging.info(f"After resampling in Training set input :{input_feature_train_arr.shape} Target:{target_feature_train_arr.shape}")

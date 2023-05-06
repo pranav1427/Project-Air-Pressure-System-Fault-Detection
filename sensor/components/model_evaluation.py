@@ -45,9 +45,9 @@ class ModelEvaluation:
 
             #Finding location of transformer model and target encoder
             logging.info("Finding location of transformer model and target encoder")
-            transformer_path = self.model_resolver.get_latest_save_transformer_path()
+            transformer_path = self.model_resolver.get_latest_transformer_path()
             model_path = self.model_resolver.get_latest_model_path()
-            target_encoder_path= self.model_resolver.get_latest_target_encoder_path()
+            target_encoder_path = self.model_resolver.get_latest_target_encoder_path()
 
             logging.info("Previous trained objects of transformer, model and target encoder")
             #Previous trained  objects
