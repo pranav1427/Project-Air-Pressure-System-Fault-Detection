@@ -1,3 +1,5 @@
 .env
 artifact
 logs
+saved_models
+prediction
