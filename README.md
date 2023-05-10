@@ -24,3 +24,14 @@ wget https://raw.githubusercontent.com/avnyadav/sensor-fault-detection/main/aps_
 ```
 
 this changes are made in neurolab
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker ubuntu
+newgrp docker
+
+```
+
+
+
